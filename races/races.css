@@ -51,14 +51,27 @@ a {
 }
 
 /*Form*/
-.main__form {
-    margin: auto;
-    justify-content: space-around;
-
+.tickets__form {
     background-color: rgb(226, 226, 226);
+    text-align: center;
+
     width: 50%;
     height: auto;
     padding: 1em;
+    margin: auto;
+}
+
+.form__element {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.signup {
+    font-weight: 900;
+
+    padding: 1em;
+    color: rgb(226, 226, 226);
+    background-color: rgb(255, 0, 0);
 }
 
 /*Footer*/

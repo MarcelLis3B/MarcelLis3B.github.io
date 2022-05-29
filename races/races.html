@@ -18,9 +18,23 @@
     </nav>
 
     <main class="main">
-        <form action="" class="main__form">
-            <input type="text">
-        </form>
+        <div class="tickets__form">
+            <h2>Bądź pierwszym w kolejce na tor!</h2>
+            <form action="#" class="main__form">
+                <input type="text" id="fname" name="fname" placeholder="Imie" class="form__element">
+                <input type="text" id="lname" name="Nazwisko" placeholder="lname" class="form__element">
+                <input type="text" id="email" name="email" placeholder="Email" class="form__element">
+                <br>
+                <input type="text" id="number" name="number" placeholder="Numer telefonu" class="form__element">
+                <input type="text" id="zip" name="zip" placeholder="Kod pocztowy" class="form__element">
+                <br>
+                <input type="checkbox" id="robot" name="Nie jestem robotem"
+                class="form__element">
+                <label for="robot">Nie jestem robotem</label>
+                <br>
+                <button class="signup">SIGN UP</button>
+            </form>
+        </div>
     </main>
 
     <footer class="footer">&copy; Marcel Lis</footer>
