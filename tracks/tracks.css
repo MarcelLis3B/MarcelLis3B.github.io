@@ -1,0 +1,147 @@
+body {
+    margin: auto 0;
+
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/img/bacground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*Nav*/
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: right;
+
+    width: 100%;
+    height: 3em;
+
+    background-color: rgb(70, 72, 73);
+}
+
+a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+}
+
+.list__item {
+    list-style-type: none;
+    display: inline;
+
+    padding: 0.9em 4em;
+}
+
+.list__item:hover{
+    color: rgb(0,0,0);
+    background-color: rgb(226, 226, 226);
+}
+
+/*Main*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 100%;
+    height: 90vh;
+
+    padding-top: 3em;
+}
+
+/*State style*/
+.state {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;    
+    margin: auto;
+
+    background-color: rgb(226, 226, 226);
+    width: 50%;
+
+    padding: 1em;
+
+    transition: margin 0.8s;
+}
+
+.arrow__container {
+    display: grid;
+    place-items: center;
+
+    flex-basis: 10%;
+}
+
+.arrow {
+    display: block;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    border: solid rgb(0,0,0);
+    border-width: 0 3px 3px 0;
+
+    transform: rotate(45deg);
+
+    cursor: pointer;
+}
+
+.title__container {
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+    flex-basis: 58%;
+}
+
+.img__container {
+    display: inline-block;
+    flex-basis: 30%;
+}
+
+.track {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    flex-basis: 100%;
+
+    transition: all 0.8s linear;
+}
+
+.track__img {
+    height: 177px;
+    max-height: 0;
+    width: 300px;
+    display: block;
+    margin: auto;
+
+    transform: scale(0);
+
+    transition: all 0.8s linear;
+}
+
+.track__name {
+    transform: scale(0);
+    transition: all 0.8s linear;
+    text-align: center;
+}
+
+.track__desc {
+    transform: scale(0);
+    transition: all 0.8s linear;
+    text-align: justify;
+}
+
+/*Footer*/
+.footer {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+    padding: 10px 10px 0px 10px;
+
+    text-align: center;
+
+    background-color: rgb(92, 92, 92);
+}

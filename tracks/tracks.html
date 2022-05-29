@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tracks.css">
+    <title>Fox on NASCAR</title>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav__list">
+            <a href="/tracks/tracks.html"><li class="list__item">Tracks</li></a>
+            <a href="/cars/cars.html"><li class="list__item">Cars</li></a>
+            <a href="/races/races.html"><li class="list__item">Races</li></a>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <div class="state">
+            <div class="arrow__container">
+                <span class="arrow"></span>
+            </div>
+            <div class="title__container">
+                <h1 class="state__name">Florida</h1>
+            </div>
+            <div class="img__container">
+                <img src="../img/floryda.png" alt="Florida" class="state__img">
+            </div>
+
+            <div class="track">
+                <img src="../img/floryda.png" alt="daytona" class="track__img">
+                <h2 class="track__name">daytona</h2>
+                <p class="track__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus officiis quos laborum distinctio iusto temporibus nihil deleniti et earum corporis, modi, incidunt harum! Corporis ex enim a quaerat quisquam.</p>
+            </div>
+        </div>
+
+        <div class="state">
+            <div class="arrow__container">
+                <span class="arrow"></span>
+            </div>
+            <div class="title__container">
+                <h1 class="state__name">Texas</h1>
+            </div>
+            <div class="img__container">
+                <img src="../img/texas.png" alt="Florida" class="state__img">
+            </div>
+
+            <div class="track">
+                <img src="../img/floryda.png" alt="daytona" class="track__img">
+                <h2 class="track__name">daytona</h2>
+                <p class="track__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus officiis quos laborum distinctio iusto temporibus nihil deleniti et earum corporis, modi, incidunt harum! Corporis ex enim a quaerat quisquam.</p>
+            </div>
+        </div>
+
+        <div class="state">
+            <div class="arrow__container">
+                <span class="arrow"></span>
+            </div>
+            <div class="title__container">
+                <h1 class="state__name">California</h1>
+            </div>
+            <div class="img__container">
+                <img src="../img/california.png" alt="Florida" class="state__img">
+            </div>
+
+            <div class="track">
+                <img src="../img/floryda.png" alt="daytona" class="track__img">
+                <h2 class="track__name">daytona</h2>
+                <p class="track__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus officiis quos laborum distinctio iusto temporibus nihil deleniti et earum corporis, modi, incidunt harum! Corporis ex enim a quaerat quisquam.</p>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">&copy; Marcel Lis</footer>
+
+    <script>
+        var elements = document.getElementsByClassName("arrow__container");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', expandInfo.bind(this, i));
+        }
+
+        function expandInfo(i) {
+            let title = document.getElementsByClassName("track__name")[i];
+            let desc = document.getElementsByClassName("track__desc")[i];
+            let state = document.getElementsByClassName("state")[i];
+            let track = document.getElementsByClassName("track")[i];
+            let arrow = document.getElementsByClassName("arrow")[i];
+            let img = document.getElementsByClassName("track__img")[i];
+
+            if (track.clientHeight == "0") {
+                state.style.marginTop = "20em";
+                state.style.marginBottom = "5em";
+
+                track.style.height = "auto";
+                track.style.marginTop = "5em";
+                track.style.padding = "1em";
+                track.style.overflow = "visible";
+                track.style.opacity = "1";
+
+                arrow.style.transform = "rotate(-135deg)";
+
+                img.style.maxHeight = "177px";
+                img.style.transform = "scale(1)";
+
+                title.style.transform = "scale(1)";
+                desc.style.transform = "scale(1)";
+            }
+
+            else {
+                state.style.marginTop = "auto";
+                state.style.marginBottom = "auto";
+
+                track.style.height = "0";
+                track.style.padding = "0";
+                track.style.marginTop = "0";
+                track.style.overflow = "hidden";
+                arrow.style.transform = "rotate(45deg)";
+
+                img.style.maxHeight = "0";
+                img.style.transform = "scale(0)";
+
+                title.style.transform = "scale(0)";
+                desc.style.transform = "scale(0)";
+            }
+        }
+    </script>
+</body>
+</html>
